@@ -1,0 +1,44 @@
+@import './standard-base';
+
+$ph-btn-height: 40px;
+$ph-btn-fs: 14px;
+$ph-btn-radius: 4px;
+$ph-btn-padding: 0 15px 0 15px;
+$ph-btn-fc-white: #FFFFFF;
+// $ph-btn-fc-disabled: #D3D3D3;
+// $ph-btn-bgc-warning: #FA6F80;
+$ph-btn-letter-spacing: 1.5px;
+$ph-btn-border: 1px solid #FFFFFF;
+$ph-btn-min-width: 100px;
+
+.ph-btn {
+    height: $ph-btn-height;
+    padding: $ph-btn-padding;
+    font-family: $ph-font-family;
+    font-size: $ph-btn-fs;
+    color: $ph-btn-fc-white;
+    background-color: $ph-color-assist-main;
+    border-radius: $ph-btn-radius;
+    letter-spacing: $ph-btn-letter-spacing;
+    min-width: $ph-btn-min-width;
+}
+
+.default {
+}
+
+.second {
+    background-color: inherit;
+    border: $ph-btn-border;
+}
+
+.warning {
+    background-color: $ph-color-func-error;
+}
+
+.disabled {
+    background-color: $ph-color-assist-bg;
+    color: $ph-fc-assist;
+}
+
+.icontext {
+}

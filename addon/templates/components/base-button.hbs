@@ -1,0 +1,11 @@
+{{!-- {{yield}} --}}
+{{#if (eq type "icontext")}}
+<button local-class="ph-btn {{type}}" {{action "click"}}>
+    {{!-- <img src={{icon}}> --}}
+    {{content}}
+</button>
+{{else}}
+<button local-class="ph-btn {{type}}" {{action "click"}}>
+    {{content}}
+</button>
+{{/if}}
