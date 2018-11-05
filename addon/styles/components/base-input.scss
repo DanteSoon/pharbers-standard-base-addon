@@ -12,18 +12,19 @@ $ph-input-border: 1px solid $ph-fc-title;
 $ph-input-min-width: 200px;
 $ph-input-line-height: 22px;
 $ph-input-bgc: #FFFFFF;
-$ph-input-left-margin: 8px;
+$ph-input-label-margin: 8px;
 $ph-input-search-radius: 4px 0 0 4px;
 $ph-input-search-button-radius: 0 4px 4px 0;
 $ph-input-area-padding: 0 8px 0 8px;
 $ph-input-area-height: 100px;
+$ph-input-warp-margin: 8px 8px 8px 8px;
 
 
 
 
 .ph-input {
     height: $ph-input-height-sm;
-    margin-left: $ph-input-left-margin;
+    // margin-left: $ph-input-left-margin;
     border: $ph-input-border;
     font-family: $ph-font-family;
     font-size: $ph-fs-content;
@@ -41,7 +42,7 @@ $ph-input-area-height: 100px;
 }
 
 .ph-input-label {
-    // margin-right: $ph-input-label-margin;
+    margin-right: $ph-input-label-margin;
     color: $ph-fc-title;
     font-size: $ph-fs-content;
     margin-bottom: 0;
@@ -62,7 +63,7 @@ $ph-input-area-height: 100px;
     vertical-align: top;
     resize: none;
     height: $ph-input-area-height;
-    
+
     &::-webkit-input-placeholder {
         font-size: $ph-fs-content;
         color: $ph-fc-assist;
@@ -90,4 +91,8 @@ $ph-input-area-height: 100px;
     left: -4px;
     margin-left: 0;
     border-style: none;
+}
+
+.ph-input-warp{
+    margin: $ph-input-warp-margin;
 }

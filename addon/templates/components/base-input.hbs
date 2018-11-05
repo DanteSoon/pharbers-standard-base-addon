@@ -1,12 +1,14 @@
 {{!-- {{yield}} --}}
-{{#if title}}
+<div local-class="ph-input-warp">
+    {{#if title}}
     <label local-class="ph-input-label">{{title}}</label>
-{{/if}}
-{{#if (eq type "search")}}
+    {{/if}}
+    {{#if (eq type "search")}}
     <input local-class="ph-input ph-input-search ph-input-{{size}}" type="text" placeholder={{pc}} value={{value}} />
     <button local-class="ph-input-search-button ph-input-{{size}}" {{action "click"}}>{{searchTitle}}</button>
-{{else if (eq type "area")}}
+    {{else if (eq type "area")}}
     <textarea local-class="ph-input ph-input-area" placeholder={{pc}}>{{value}}</textarea>
-{{else}}
+    {{else}}
     <input local-class="ph-input ph-input-default ph-input-{{size}}" type="text" placeholder={{pc}} value={{value}} />
-{{/if}}
+    {{/if}}
+</div>

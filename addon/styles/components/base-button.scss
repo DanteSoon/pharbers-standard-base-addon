@@ -11,6 +11,7 @@ $ph-btn-letter-spacing: 1.5px;
 $ph-btn-second-border: 1px solid $ph-fc-content;
 $ph-btn-second-havebg-border: 1px solid #FFFFFF;
 $ph-btn-min-width: 100px;
+$ph-btn-warp-margin: 8px 8px 8px 8px;
 
 .ph-btn {
     height: $ph-btn-height;
@@ -22,6 +23,7 @@ $ph-btn-min-width: 100px;
     border-radius: $ph-btn-radius;
     letter-spacing: $ph-btn-letter-spacing;
     min-width: $ph-btn-min-width;
+    border: none;
 }
 
 .ph-btn-default {
@@ -49,4 +51,8 @@ $ph-btn-min-width: 100px;
 }
 
 .ph-btn-icontext {
+}
+
+.ph-btn-warp{
+    margin: $ph-btn-warp-margin;
 }
