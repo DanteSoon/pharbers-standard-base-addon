@@ -1,11 +1,19 @@
 {{!-- {{yield}} --}}
 {{#if (eq type "icontext")}}
-<button local-class="ph-btn {{type}}" {{action "click"}}>
+<button local-class="ph-btn ph-btn-{{type}}" {{action "click"}}>
     {{!-- <img src={{icon}}> --}}
     {{content}}
 </button>
+{{else if (eq type "disabled")}}
+<button local-class="ph-btn ph-btn-{{type}}" {{action "click"}} disabled="disabled">
+    {{content}}
+</button>
+{{else if haveBg}}
+<button local-class="ph-btn ph-btn-{{type}} ph-btn-{{type}}-havebg" {{action "click"}}>
+    {{content}}
+</button>
 {{else}}
-<button local-class="ph-btn {{type}}" {{action "click"}}>
+<button local-class="ph-btn ph-btn-{{type}}" {{action "click"}}>
     {{content}}
 </button>
 {{/if}}

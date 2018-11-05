@@ -1,15 +1,16 @@
 <h2 id="title">Welcome to Ember</h2>
 <div>
     {{base-input type="search" size="small" value=testValue pc="type something" icon="" title="标签" searchTitle="搜索" act="search"}}
+    {{base-input type="search" size="large" value=testValue pc="type something" icon="" title="标签" searchTitle="搜索" act="search"}}
     {{base-button content="Click" type="default" params="next"  act="next"}}
     {{base-button content="Click" type="second" params="next"  act="next"}}
     {{base-button content="Click" type="warning" params="cancel"  act="cancel"}}
     {{base-button content="Click" type="disabled" params="next"  act="next"}}
     {{base-button content="Click" type="icontext" params="next"  act="next" icon="a"}}
 </div>
-<div>
+<div local-class="bg-div">
     {{base-button content="Click" type="default" params="next"  act="next"}}
-    {{base-button content="Click" type="second" params="next"  act="next"}}
+    {{base-button content="Click" type="second" params="next"  act="next"  haveBg=true}}
     {{base-button content="Click" type="warning" params="cancel"  act="cancel"}}
     {{base-button content="Click" type="disabled" params="next"  act="next"}}
     {{base-button content="Click" type="icontext" params="next"  act="next" icon="a"}}
