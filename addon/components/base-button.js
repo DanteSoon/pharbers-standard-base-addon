@@ -7,10 +7,7 @@ export default Component.extend({
   actions: {
     click: function() {
 			//  发送到控制器中的方法，
-			this.sendAction("act", this.get('params'));
+			this.sendAction("onClick", this.get('params'));
     },
-    // buttonClicked(param) {
-    //   this.get('onButtonClicked')(param);
-    // }
 	}
 });
