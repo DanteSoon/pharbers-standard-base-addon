@@ -8,6 +8,9 @@ export default Component.extend({
     click: function() {
 			//  发送到控制器中的方法，
 			this.sendAction("act", this.get('params'));
-		}
+    },
+    // buttonClicked(param) {
+    //   this.get('onButtonClicked')(param);
+    // }
 	}
 });

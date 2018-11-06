@@ -1,20 +1,22 @@
 {{!-- {{yield}} --}}
 <div local-class="ph-btn-warp">
-    {{#if (eq type "icontext")}}
-    <button local-class="ph-btn ph-btn-{{type}}" {{action "click"}}>
-        {{!-- <img src={{icon}}> --}}
+    {{#if (eq type "disabled")}}
+    <button local-class="ph-btn ph-btn-{{type}}" {{action "buttonClicked" params}} disabled="disabled">
+        <i class="{{icon}}"></i>
         {{content}}
     </button>
-    {{else if (eq type "disabled")}}
-    <button local-class="ph-btn ph-btn-{{type}}" {{action "click"}} disabled="disabled">
-        {{content}}
+    {{else if (eq type "icon")}}
+    <button local-class="ph-btn ph-btn-{{type}} ph-btn-{{type}}-havebg" {{action "buttonClicked" params}}>
+        <i class="{{icon}}"></i>
     </button>
     {{else if haveBg}}
-    <button local-class="ph-btn ph-btn-{{type}} ph-btn-{{type}}-havebg" {{action "click"}}>
+    <button local-class="ph-btn ph-btn-{{type}} ph-btn-{{type}}-havebg" {{action "buttonClicked" params}}>
+        <i class="{{icon}}"></i>
         {{content}}
     </button>
     {{else}}
-    <button local-class="ph-btn ph-btn-{{type}}" {{action "click"}}>
+    <button local-class="ph-btn ph-btn-{{type}}" {{action "buttonClicked" params}}>
+        <i class="{{icon}}"></i>
         {{content}}
     </button>
     {{/if}}

@@ -3,7 +3,6 @@
 
 $ph-input-height-sm: 32px;
 $ph-input-height-lg: 40px;
-// $ph-input-fs: 14px;
 $ph-input-letter-spacing: 1.5px;
 $ph-input-radius: 4px;
 $ph-input-padding: 0 8px 0 8px;
@@ -18,13 +17,16 @@ $ph-input-search-button-radius: 0 4px 4px 0;
 $ph-input-area-padding: 0 8px 0 8px;
 $ph-input-area-height: 100px;
 $ph-input-warp-margin: 8px 8px 8px 8px;
+$ph-input-icon-top: 0px;
+$ph-input-icontext-icon-top: -3px;
+$ph-input-icon-left: 8px;
+$ph-input-icon-placeholder-padding: 14px;
 
 
 
 
 .ph-input {
     height: $ph-input-height-sm;
-    // margin-left: $ph-input-left-margin;
     border: $ph-input-border;
     font-family: $ph-font-family;
     font-size: $ph-fs-content;
@@ -60,6 +62,7 @@ $ph-input-warp-margin: 8px 8px 8px 8px;
 }
 
 .ph-input-area {
+    line-height: $ph-input-line-height;
     vertical-align: top;
     resize: none;
     height: $ph-input-area-height;
@@ -70,12 +73,28 @@ $ph-input-warp-margin: 8px 8px 8px 8px;
     }
 }
 
-.ph-input-small {
-    height: $ph-input-height-sm;
+:global(.small) {
+        input {
+            height: $ph-input-height-sm;
+
+        }
+        
+        button {
+            height: $ph-input-height-sm;
+        }
+
+        i {
+            top: $ph-input-icontext-icon-top!important;
+        }
 }
 
-.ph-input-large {
-    height: $ph-input-height-lg;
+:global(.large) {
+        input {
+            height: $ph-input-height-lg;
+        }
+        button {
+            height: $ph-input-height-lg;
+        }
 }
 
 .ph-input-search-button{
@@ -95,4 +114,38 @@ $ph-input-warp-margin: 8px 8px 8px 8px;
 
 .ph-input-warp{
     margin: $ph-input-warp-margin;
+}
+
+.ph-input-searchbar{
+    display: inline;
+    position: relative;
+
+    ::-webkit-input-placeholder {
+        padding: $ph-input-icon-placeholder-padding;
+    }
+
+    i {
+        position: absolute;
+        top: $ph-input-icon-top;
+        left: $ph-input-icon-left;
+        color: $ph-fc-assist;
+        font-size: $ph-fs-content;
+    }
+}
+
+.ph-input-icontext{
+    display: inline;
+    position: relative;
+
+    ::-webkit-input-placeholder {
+        padding: $ph-input-icon-placeholder-padding;
+    }
+
+    i {
+        position: absolute;
+        top: $ph-input-icon-top;
+        left: $ph-input-icon-left;
+        color: $ph-fc-assist;
+        font-size: $ph-fs-content;
+    }
 }

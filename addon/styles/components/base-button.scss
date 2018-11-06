@@ -5,13 +5,14 @@ $ph-btn-fs: 14px;
 $ph-btn-radius: 4px;
 $ph-btn-padding: 0 15px 0 15px;
 $ph-btn-fc-white: #FFFFFF;
-// $ph-btn-fc-disabled: #D3D3D3;
-// $ph-btn-bgc-warning: #FA6F80;
 $ph-btn-letter-spacing: 1.5px;
 $ph-btn-second-border: 1px solid $ph-fc-content;
 $ph-btn-second-havebg-border: 1px solid #FFFFFF;
 $ph-btn-min-width: 100px;
 $ph-btn-warp-margin: 8px 8px 8px 8px;
+$ph-btn-icon-size: 20px;
+$ph-btn-icon-height: 40px;
+$ph-btn-icon-padding: 0 7px 0 7px;
 
 .ph-btn {
     height: $ph-btn-height;
@@ -24,19 +25,27 @@ $ph-btn-warp-margin: 8px 8px 8px 8px;
     letter-spacing: $ph-btn-letter-spacing;
     min-width: $ph-btn-min-width;
     border: none;
+    
+    // &:focus{
+    //     outline: none;
+    // }
+
+    i {
+        font-size: $ph-btn-fs;
+    }
 }
 
 .ph-btn-default {
 }
 
 .ph-btn-second {
-    background-color: inherit;
+    background-color: transparent;
     color: $ph-fc-content;
     border: $ph-btn-second-border;
 }
 
 .ph-btn-second-havebg {
-    background-color: inherit;
+    background-color: transparent;
     color: $ph-btn-fc-white;
     border: $ph-btn-second-havebg-border;
 }
@@ -50,7 +59,16 @@ $ph-btn-warp-margin: 8px 8px 8px 8px;
     color: $ph-fc-assist;
 }
 
-.ph-btn-icontext {
+.ph-btn-icon {
+    letter-spacing: 0;
+    padding: $ph-btn-icon-padding;
+    width: 40px;
+    min-width: 0;
+    height: $ph-btn-icon-height;
+
+    i {
+        font-size: $ph-btn-icon-size;
+    }
 }
 
 .ph-btn-warp{
