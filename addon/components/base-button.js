@@ -3,6 +3,8 @@ import layout from '../templates/components/base-button';
 
 export default Component.extend({
   layout,
+  attributeBindings: ['style'],
+  style: 'display:inline-block',
   positionalParams: ['params'],
   actions: {
     click: function() {

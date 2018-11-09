@@ -4,6 +4,8 @@ import { computed } from '@ember/object';
 
 export default Component.extend({
   layout,
+  attributeBindings: ['style'],
+  style: 'display:inline-block',
   positionalParams: ['params','size'],
   classNameBindings: ['sizeClass'],
   sizeClass: computed("sizeClass",function() {
