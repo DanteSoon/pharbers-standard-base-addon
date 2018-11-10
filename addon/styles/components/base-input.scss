@@ -48,6 +48,7 @@ $ph-input-icon-placeholder-padding: 14px;
     color: $ph-fc-title;
     font-size: $ph-fs-content;
     margin-bottom: 0;
+    font-weight: normal;
 }
 
 .ph-input-default {
@@ -66,6 +67,8 @@ $ph-input-icon-placeholder-padding: 14px;
     vertical-align: top;
     resize: none;
     height: $ph-input-area-height;
+    position: relative;
+    top: -6px;
 
     &::-webkit-input-placeholder {
         font-size: $ph-fs-content;
@@ -74,26 +77,50 @@ $ph-input-icon-placeholder-padding: 14px;
 }
 
 :global(.small) {
+
         input {
             height: $ph-input-height-sm;
 
         }
-        
         button {
             height: $ph-input-height-sm;
-        }
 
-        i {
-            top: $ph-input-icontext-icon-top!important;
+        }
+        .ph-input-icontext{
+
+            i {
+                top: -3px;
+            }
+        }
+        .ph-input-searchbar{
+        
+            i {
+                top: -3px;
+            }
         }
 }
 
 :global(.large) {
+
         input {
             height: $ph-input-height-lg;
+
         }
         button {
             height: $ph-input-height-lg;
+
+        }
+        .ph-input-icontext{
+
+            i {
+                top: -1px;
+            }
+        }
+        .ph-input-searchbar{
+        
+            i {
+                top: -1px;
+            }
         }
 }
 
@@ -108,12 +135,13 @@ $ph-input-icon-placeholder-padding: 14px;
     border-radius: $ph-input-search-button-radius;
     position: relative;
     left: -4px;
+    top: -1px;
     margin-left: 0;
     border-style: none;
 }
 
 .ph-input-warp{
-    // margin: $ph-input-warp-margin;
+    position: relative;
 }
 
 .ph-input-searchbar{
@@ -143,7 +171,7 @@ $ph-input-icon-placeholder-padding: 14px;
 
     i {
         position: absolute;
-        top: $ph-input-icon-top;
+        // top: -3px;
         left: $ph-input-icon-left;
         color: $ph-fc-assist;
         font-size: $ph-fs-content;
